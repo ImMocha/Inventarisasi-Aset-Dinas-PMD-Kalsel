@@ -56,7 +56,7 @@ $pdf->Cell(40, 10, 'Fungsi', 1, 1, 'C');
 // Isi tabel
 $pdf->SetFont('Arial', '', 9);
 $no = 1;
-$query = mysqli_query($koneksi, "SELECT * FROM tbl_ruang ORDER BY ruang ASC");
+$query = mysqli_query($koneksi, "SELECT * FROM tbl_ruang");
 while ($data = mysqli_fetch_array($query)) {
     // Cek jika perlu halaman baru
     if ($pdf->GetY() > 250) {
